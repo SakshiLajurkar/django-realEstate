@@ -1,0 +1,69 @@
+{% extends 'estateapp/base.html' %}
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Property View</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+{% block body %}
+
+    <div class="album py-5 bg-dark" >
+
+<div class="card w-75"   style=" margin-left: auto; margin-right: auto; margin-top:0.5%;">
+  <div class="card-body">
+
+
+
+<div class="media ">
+  <img src="{{property.image_url}}" class="align-self-start mr-3" alt="..." style="max-height: 30rem;">
+  <div class="media-body">
+    <h5 class="mt-0 text-center"><b>{{property.property_name}}</b></h5>
+    <table class="table" style="margin-top:8%;">
+      <tbody>
+
+        <tr>
+          <td><label><b>Area</b></label></td>
+          <td>{{property.area}}</td>
+        </tr>
+        <tr>
+          <td><label><b>Address</b></label></td>
+          <td>{{property.postadd}}</td>
+        </tr>
+        <tr>
+          <td><label><b>Bedrooms</b></label></td>
+          <td>{{property.rooms}}</td>
+        </tr>
+        <tr>
+          <td><label><b>Bathrooms</b></label></td>
+          <td>{{property.baths}}</td>
+        </tr>
+        <tr>
+          <td><label><b>Price</b></label></td>
+          <td>{{property.price}}</td>
+        </tr>
+        <tr>
+          <td><label><b>Contact</b></label></td>
+          <td>{{property.contact}}</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+
+      </div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
+
+
+</body>
+
+</html>
